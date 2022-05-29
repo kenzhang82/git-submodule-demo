@@ -6,20 +6,19 @@ module top (
 	output logic mux_out
 );
 
-	adder adder_inst
-	(
-		.a (in0),
-		.b (in1),
-		.c (add_out)
-	);
+  adder adder_inst
+  (
+    .a (in0),
+    .b (in1),
+    .c (add_out)
+  );
 	
-
   mux u_mux
   (
-  	.s(select),
-  	.a(in0),
-  	.b(in1),
-  	.o(mux_out)
+    .s(select),
+    .a(in0),
+    .b(in1),
+    .o(mux_out)
   );
 
 endmodule
